@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #0032A0;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #CC0000;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: #FFD100;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    .contact-info h3 {
+      margin-top: 0;
+    }
+    .contact-details p {
+      margin: 8px 0;
+    }
+    .follow {
+      margin-top: 20px;
+    }
+    .follow h4 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    .follow a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .follow a[href*="facebook"] {
+      background-color: #3b5998;
+    }
+    .follow a[href*="facebook"]:hover {
+      background-color: #2d4373;
+      transform: scale(1.05);
+    }
+    .follow a[href*="instagram"] {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+    .follow a[href*="instagram"]:hover {
+      filter: brightness(0.9);
+      transform: scale(1.05);
+    }
+    .follow a[href*="tiktok"] {
+      background-color: #010101;
+      color: #69c9d0;
+    }
+    .follow a[href*="tiktok"]:hover {
+      background-color: #333;
+      color: #ff0050;
+      transform: scale(1.05);
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    button {
+      background: #0066cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #004080;
+    }
+    footer {
+      background: #0032A0;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    @media (max-width: 500px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .follow a {
+        margin-bottom: 10px;
+        display: block;
+      }
+    }
+    #responseMsg {
+      color: green;
+      font-weight: bold;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Malaysia MADANI: Rakyat Disantuni</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="food1.html">Traditional Food</a>
+    <a href="food2.html">More</a>
+    <a href="culture.html">Cultural Significance</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <h2>Stay Connected with Us</h2>
+    <p>We’d love to hear from you! Whether you want to share your feedback, ask a question, or suggest more ideas, just reach out through the form or the details below.</p>
+
+    <div class="contact-info">
+      <h3>Our Contact Information</h3>
+      <div class="contact-details">
+        <p><strong>Address:</strong> Heritage Media &amp; Design Level 5, Wisma Harmoni, Jalan Tun Razak, 50400 Kuala Lumpur</p>
+        <p><strong>Email:</strong> hello@heritagemedia.my</p>
+        <p><strong>Phone:</strong> +60 3-2712 8899‬</p>
+        <p><strong>Website:</strong> <a href="https://www.malaysiamadani.my" target="_blank" rel="noopener noreferrer">www.heritagemadani.my</a></p>
+      </div>
+      <div class="follow">
+        <h4>Follow Us</h4>
+        <a href="https://facebook.com/heritagemedia" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/heritagemedia.my" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://tiktok.com/@heritagemedia" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+    </div>
+    
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <p id="responseMsg">✅ Your message has been submitted!</p>
+  </div>
+
+  <footer>
+    © Malaysia MADANI. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault(); 
+      this.reset(); 
+      document.getElementById("responseMsg").style.display = "block"; 
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #0032A0;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #CC0000;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: #FFD100;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+	.gallery {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .gallery h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #010066;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-card {
+      background: white;
+      border: 2px solid #0032A0;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: auto; 
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .gallery-card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #0032A0;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .video-section {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .video-section iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Malaysia MADANI: Rakyat Disantuni</h1>
+  </header>
+  <nav>
+    <a href="../imanng/index.html">Home</a>
+    <a href="../imanng/food1.html">Traditional Food</a>
+    <a href="../imanng/food2.html">More</a>
+    <a href="../imanng/culture.html">Cultural Significance</a>
+    <a href="../imanng/gallery.html">Gallery</a>
+    <a href="../imanng/contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="../imanng/img/gly5.jpg" alt="Gallery 1" height="333" />
+      <img src="../imanng/img/gly3.jpg" alt="Gallery 2" height="333" />
+      <img src="../imanng/img/gly.jpg" alt="Gallery 3" height="333" />
+      <img src="../imanng/img/gg.jpg" alt="Gallery 4" height="333" />
+      <img src="../imanng/img/fg.jpg" alt="Gallery 5" height="333" />
+      <img src="../imanng/img/glyyy.jpg" alt="Gallery 6" height="333" />
+    </div>
+  </div>
+	<section class="gallery">
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="../imanng/img/TWO.jpg" alt="Gambar 1">
+        <p>Malaysia Food Festival in Thailand 2025</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../imanng/img/ONE.jpg" alt="Gambar 2">
+        <p>Tourism Malaysia; Malaysian Food Festival 2025</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../imanng/img/THREE.jpg" alt="Gambar 3">
+        <p>Absolut Food Festival 2023</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../imanng/img/FOUR.jpg" alt="Gambar 4">
+        <p>Malaysia Food &amp; Cultural Festival 2024 (Consulate General Of Malaysia and Tourism Malaysia)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>Festival Videos</h2>
+
+    <iframe src="https://www.youtube.com/embed/Ho-yj5nWYlY" 
+    title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/oKUyOl_znMw" 
+    title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/WKCxU6N9HTw" 
+    title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    © Malaysia MADANI. All rights reserved.
+  </footer>
+</body>
+</html>

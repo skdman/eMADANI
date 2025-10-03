@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysia MADANI: Rakyat Disantuni</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #0032A0;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 70px;
+      animation: reflect 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes reflect {
+      0%   { transform: scaleX(1); }
+      50%  { transform: scaleX(-1); }
+      100% { transform: scaleX(1); }
+    }
+
+    header .title {
+      flex: 1;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+
+    nav {
+      background: #CC0000;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #FFD100;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #0032A0;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .text-box {
+      background: #ffffff;
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .text-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .controls {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .controls button {
+      padding: 12px 25px;
+      margin: 8px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #004aad, #0099ff);
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .controls button:hover {
+      transform: scale(1.05);
+    }
+
+    .active-play {
+      background: linear-gradient(135deg, #00c851, #007e33) !important;
+    }
+
+    .active-pause {
+      background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo Malaysia Madani">
+    <div class="title">
+      <h1>Malaysia MADANI: Rakyat Disantuni</h1>
+      <p>Celebrating Heritage, Strengthening Unity</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="food1.html">Traditional Food</a>
+    <a href="food2.html">More</a>
+    <a href="culture.html">Cultural Significance</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to Malaysia MADANI</h2>
+
+    <div class="text-box">
+      <p>Welcome to the official website for Malaysia’s 68th National Day celebration! This year’s theme, “Malaysia MADANI: Rakyat Disantuni” emphasizes compassion, mutual respect, and the well-being of the people in building a harmonious nation.</p>
+
+      <p>Malaysia is a country rich in culture, traditions, and heritage. Among our most treasured symbols of unity is traditional food. From the nation’s pride, Nasi Lemak, to the sweet delight of Onde-Onde, each dish reflects the unity and diversity of our multicultural society.</p>
+
+      <p>This website showcases some of Malaysia’s beloved traditional dishes such as Nasi Kerabu, Satay, Laksam, and Onde-Onde, meals that not only satisfy the appetite but also connect people across different races and religions.</p>
+
+      <p>Let us celebrate Malaysia’s 68th National Day with pride and gratitude, while appreciating our traditional food heritage that continues to strengthen our national identity.</p>
+    </div>
+
+    <img src="img/imgmadani.jpg" alt="Malaysia">
+
+    <div class="controls">
+      <button id="playBtn" onclick="playVideo()">▶ Play Music</button>
+      <button id="pauseBtn" onclick="pauseVideo()">⏸ Pause Music</button>
+    </div>
+  </div>
+
+  <footer>
+    © Malaysia MADANI. All rights reserved.
+  </footer>
+
+  <div style="display:none;">
+    <iframe id="ytplayer" width="0" height="0"
+      src="https://www.youtube.com/embed/c-Y3-KYSddE?enablejsapi=1"
+      frameborder="0" allow="autoplay"></iframe>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('ytplayer');
+    }
+
+    function playVideo() {
+      player.playVideo();
+      document.getElementById("playBtn").classList.add("active-play");
+      document.getElementById("pauseBtn").classList.remove("active-pause");
+    }
+
+    function pauseVideo() {
+      player.pauseVideo();
+      document.getElementById("pauseBtn").classList.add("active-pause");
+      document.getElementById("playBtn").classList.remove("active-play");
+    }
+  </script>
+</body>
+</html>
